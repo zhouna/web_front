@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/*取消表单的轮廓线*/
+input {
+    outline: none;
+}
+/*清除列表样式*/
+li {
+    list-style: none;
+    text-decoration: none;
+}
+/*去掉button默认自带的边框*/
+button {
+    border: 0px;
+}
+a {
+    text-decoration: none;
+}
+.w {
+	width: 970px;
+	margin: auto;
+}
+body {
+	font: 14px/1.6 -apple-system-font,BlinkMacSystemFont,Helvetica Neue,PingFang SC,Hiragino Sans GB,Microsoft YaHei UI,Microsoft YaHei,Arial,sans-serif;
+}

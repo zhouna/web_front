@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>margin负值——消除重叠边框</title>
+	<link rel="stylesheet" type="text/css" href="css/init.css">
+	<style type="text/css">
+		.box {
+			float: left;
+			width: 150px;
+			height: 250px;
+			border: 1px solid #ddd;
+			margin-top: -1px;
+			margin-left: -1px;
+		}
+		.box:hover {
+			border: 1px solid #f40;
+			z-index: 0;
+			position: relative;
+		}
+		.triangle {
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 10px;
+			border-color: transparent red transparent transparent;
+			font-size: 0;
+			line-height: 0;
+		}
+	</style>
+</head>
+<body>
+	
+	<div class="triangle"></div>
+</body>
+</html>

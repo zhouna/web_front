@@ -1,0 +1,53 @@
+/*公共样式*/
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.w {
+	width: 1190px;
+	margin: 0 auto;
+}
+
+.shortcut {
+	background-color: #e3e4e5;
+	height: 35px;
+	line-height: 35px;
+}
+.weizhi {
+	color: red;
+	font-size: 20px;
+}
+.shortcut li {
+	float: left;
+}
+.shortcut li {
+	padding-left: 10px;
+}
+.shortcut a {
+	display: inline-block;
+}
+.xia {
+	font-size: 5px;
+	margin-left: 5px;
+}
+
+.dt {
+	position: relative;
+	border: 1px solid #eee;
+	border-bottom: none;
+}
+.ddd {
+	position: absolute;
+	border: 1px solid #eee;
+	padding: 5px;
+	border-top: none;
+}
+/*.dt:hover {
+	background-color: #fff;
+}*/
+.dt:hover .ddd {
+	display: none;
+	border: 1px solid red;
+}

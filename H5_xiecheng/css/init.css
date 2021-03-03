@@ -1,0 +1,52 @@
+/* css 初始化代码 css reset */
+/*清除元素默认的内外边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+/*让所有的斜体 不倾斜*/
+em,
+i {
+	font-style: normal;
+}
+/*取消表单的轮廓线*/
+input {
+    outline: none;
+}
+/*图片没有边框，去掉图片底部的空白缝隙*/
+img {
+	border: 0;
+	vertical-align: middle;
+}
+/*清除列表样式*/
+li {
+    list-style: none;
+    text-decoration: none;
+}
+/*去掉button默认自带的边框*/
+button {
+    border: 0;
+    cursor: pointer;
+}
+a {
+	color: #666;
+    text-decoration: none;
+}
+a:hover {
+	color: #e33333;
+}
+.hide,
+.none {
+	display: none;
+}
+/*声明清除浮动的样式*/
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.clearfix {
+    *zoom: 1; /*ie6,7专门清除浮动的样式*/
+}

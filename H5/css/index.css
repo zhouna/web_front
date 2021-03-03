@@ -1,0 +1,121 @@
+body {
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+    margin: 0 auto;
+    background-color: #fff;
+    font-size: 14px;
+    font-family: -apple-system, Helvetica,sans-serif;
+    line-height: 1.5;
+    color: #666;
+}
+
+/*下载app*/
+.app {
+    height: 45px;
+}
+.app ul li {
+    float: left;
+    height: 45px;
+    line-height: 45px;
+    background-color: #333;
+    text-align: center;
+    color: #fff;
+    font-family: 14px -apple-system,Helvetica,sans-serif;
+}
+.app ul li:nth-child(1) {
+    width: 8%;
+}
+.app ul li:nth-child(2) {
+    width: 10%;
+}
+.app ul li:nth-child(3) {
+    width: 57%;
+}
+.app ul li:nth-child(4) {
+    width: 25%;
+    background-color: #f63515;
+}
+
+/*搜索*/
+.search-wrap {
+    position: fixed;
+    height: 44px;
+    color: #fff;
+    overflow: hidden;
+    width: 100%;
+    min-width: 320px;
+    max-width: 640px;
+}
+.search-wrap div {
+    height: 44px;
+    line-height: 44px;
+}
+.search-wrap div:nth-child(1) {
+    position: absolute;
+    width: 40px;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+}
+.search-wrap div:nth-child(2) {
+    position: relative;
+    margin: 0px 50px;
+    background-color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    margin-top: 7px;
+}
+.search-wrap div:nth-child(3) {
+    position: absolute;
+    width: 40px;
+    right: 0px;
+    top: 0px;
+    font-family: PingHei,Lucida Grande,Lucida Sans Unicode,STHeiti,Helvetica,Arial,Verdana,"sans-serif";
+}
+
+.search-wrap div:nth-child(1) .three_line {
+    font-size: 20px;
+}
+.search-wrap div:nth-child(2) .jd_icon::before {
+    content: "";
+    width: 20px;
+    height: 15px;
+    display: block;
+    position: absolute;
+    background: url(../images/jd.png) no-repeat;
+    background-size: 20px 15px;
+    top: 8px;
+    left: 15px;
+}
+.search-wrap div:nth-child(2) .split::before {
+    content: "";
+    height: 16px;
+    width: 1px;
+    display: block;
+    position: absolute;
+    background-color: #ddd;
+    left: 40px;
+    top: 8px;
+}
+.search-wrap div:nth-child(2) .h5_iconsearch {
+    color: #ddd;
+    margin-left: 48px;
+}
+.search-wrap div:nth-child(2) input {
+    border: 0;
+    font-size: 12px;
+    padding-left: 5px;
+    margin-left: 5px;
+    box-sizing: border-box;
+}
+
+/* 主体内容 */
+.main-content .slider {
+    text-align: center;
+}
+.main-content .slider img {
+    width: 90%;
+    border-radius: 8px;
+}

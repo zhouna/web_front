@@ -1,0 +1,128 @@
+/* css 初始化代码 css reset */
+/*清除元素默认的内外边距*/
+* {
+	margin: 0;
+	padding: 0;
+}
+/*取消表单的轮廓线*/
+input {
+	outline: none;
+}
+/*清除列表样式*/
+li {
+	list-style: none;
+	text-decoration: none;
+}
+/*去掉button默认自带的边框*/
+button {
+	border: 0px;
+}
+body {
+	font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
+.w {
+	width: 1227px;
+	margin: auto;
+}
+.header {
+	height: 55px;
+}
+.logo {
+	float: left;
+	width: 55px;
+	height: 55px;
+	background-image: url(../images/mi-logo.png);
+	background-color: #ff6700;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-right: 189px;
+}
+.logo:hover {
+	background-image: url(../images/mi-home.png);
+}
+.nav {
+	float: left;
+}
+.nav ul li {
+	float: left;
+}
+.nav ul li a {
+	height: 55px;
+	line-height: 55px;
+	padding: 0 10px;
+	color: #333333;
+	font-size: 16px;
+	text-decoration: none;
+}
+.nav ul li a:hover {
+	color: #ff9a00;
+}
+.search {
+	float: right;
+	margin-top: 3px;
+}
+.search-text {
+	float: left;
+	width: 243px;
+	height: 48px;
+	border: 1px solid #e0e0e0;
+
+}
+.search-btn {
+	float: left;
+	width: 48px;
+	height: 48px;
+	border: 1px solid #e0e0e0;
+	background-image: url(../images/search.png);
+	background-size: 18px 18px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/*********banner*********/
+.banner {
+	margin-top: 23px;
+	height: 462px;
+	background: url(../images/banner.jpg) no-repeat;
+	background-size: 1227px auto;
+	position: relative;
+}
+.subnav {
+	float: left;
+	width: 233px;
+	margin-top: 12px;
+}
+.subnav ul li {
+	height: 44px;
+	line-height: 44px;
+	padding-left: 30px;
+	opacity: 0.7;
+}
+.subnav ul li a {
+	font: 14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+	text-decoration: none;
+	font-color: #ffffff;
+	color: #ffffff;
+}
+.subnav ul li:hover {
+	background-color: #ff6700;
+}
+.subnav ul li img {
+	width: 15px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 25px;
+}
+
+.left-arrow, .right-arrow {
+	width: 44px;
+	position: absolute;
+	top: 50%;
+	margin-top: -22px;
+}
+.left-arrow {
+	left: 233px;
+}
+.right-arrow {
+	right: 0px;
+}
