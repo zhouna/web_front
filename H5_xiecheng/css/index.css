@@ -25,6 +25,7 @@ body {
     justify-content: flex-start;
     align-items: center;
     padding-left: 12px;
+    z-index: 12;
 }
 /* 搜索模块——左侧*/
 .search-index .search {
@@ -78,7 +79,18 @@ header .focus {
 header .focus img {
     display: block;
     width: 100%;
-    border-radius: 0 0 55px 55px;
+    border-radius: 0 0 20px 20px;
+}
+header .focus::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: block;
+    z-index: 10;
+    background: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,0));
 }
 
 /* 导航图 */
@@ -146,3 +158,47 @@ header .focus img {
     background-size: 40px auto;
 }
 
+/* 主导航 */
+.nav {
+    margin: 12px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+.nav .grid-nav-common {
+    display: flex;
+    height: 66px;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav div a {
+    flex: 1;
+    border-left: 1px solid #fff;
+    background-color: pink;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+}
+.nav span {
+    display: block;
+    flex: 2;
+    height: 66px;
+    
+    background-size: 100% auto;
+    text-align: center;
+    width: 100%;
+    columns: #a05416;
+    position: relative;
+    line-height: 66px;
+}
+.nav div:nth-child(1) a:nth-child(3) {
+    background: linear-gradient(to right, #ffbc49, #ffd252);
+}
+.nav div:nth-child(1) a:nth-child(3) span {
+    background: url(../images/grid-nav-items-hot.png) right bottom no-repeat;
+}
+.nav div:nth-child(1) a:nth-child(2) {
+    /* background: linear-gradient(to right, ); */
+}
+.nav div:nth-child(1) a:nth-child(2) span {
+
+}
