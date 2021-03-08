@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+}
+.container ul {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: pink;
+}
+.container ul li {
+  width: 33.3333%;
+  list-style: none;
+  border-bottom: 1px solid purple;
+}
+@media screen and (min-width: 750px) {
+  .container {
+    width: 750px;
+    margin: 0 auto;
+  }
+  .container ul {
+    flex-wrap: nowrap;
+  }
+}
