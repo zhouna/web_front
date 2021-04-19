@@ -6,6 +6,86 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+</head>
+
+<body>
+    <!-- HTML结构 -->
+    <div id="test-div">
+        <div class="c-red">
+            <p id="test-p">JavaScript</p>
+            <p>Java</p>
+        </div>
+        <div class="c-red c-green">
+            <p>Python</p>
+            <p>Ruby</p>
+            <p>Swift</p>
+        </div>
+        <div class="c-green">
+            <p>Scheme</p>
+            <p>Haskell</p>
+        </div>
+    </div>
+
+    <!-- HTML结构 -->
+    <div id="test-div">
+        <p id="test-js">javascript</p>
+        <p>Java</p>
+    </div>
+
+    <!-- HTML结构 -->
+    <!-- <ol id="test-list">
+        <li class="lang">Scheme</li>
+        <li class="lang">JavaScript</li>
+        <li class="lang">Python</li>
+        <li class="lang">Ruby</li>
+        <li class="lang">Haskell</li>
+    </ol> -->
+
+    <!-- HTML结构 -->
+    <ul id="test-list">
+        <li>JavaScript</li>
+        <li>Swift</li>
+        <li>HTML</li>
+        <li>ANSI C</li>
+        <li>CSS</li>
+        <li>DirectX</li>
+    </ul>
+
+    <!-- HTML结构 -->
+    <form id="test-register" action="#" target="_blank" onsubmit="return checkRegisterForm()">
+        <p id="test-error" style="color:red"></p>
+        <p>
+            用户名: <input type="text" id="username" name="username">
+        </p>
+        <p>
+            口令: <input type="password" id="password" name="password">
+        </p>
+        <p>
+            重复口令: <input type="password" id="password-2">
+        </p>
+        <p>
+            <button type="submit">提交</button> <button type="reset">重置</button>
+        </p>
+    </form>
+
+    <!-- HTML结构 -->
+    <div id="test-jquery">
+        <p id="para-1" class="color-red">JavaScript</p>
+        <p id="para-2" class="color-green">Haskell</p>
+        <p class="color-red color-green">Erlang</p>
+        <p name="name" class="color-black">Python</p>
+        <form class="test-form" target="_blank" action="#0" onsubmit="return false;">
+            <legend>注册新用户</legend>
+            <fieldset>
+                <p><label>名字: <input name="name"></label></p>
+                <p><label>邮件: <input name="email"></label></p>
+                <p><label>口令: <input name="password" type="password"></label></p>
+                <p><button type="submit">注册</button></p>
+            </fieldset>
+        </form>
+    </div>
+
+    <script src="js/jquery-3.6.0.js"></script>
     <script>
         'use strict';
 
@@ -133,38 +213,222 @@
         //     return true;
         // });
 
-        function get_primes(arr) {
-            return arr.filter(function(a) {
-                if (a <= 1) return false;
-                for (var i = 2; i <= Math.sqrt(a); i++) {
-                    if (a % i == 0) {
-                        console.log(a + ", " + (a % i));
-                        return false;
-                    }
-                }
-                return true;
-            });
-        }
+        // function get_primes(arr) {
+        //     return arr.filter(function(a) {
+        //         if (a <= 1) return false;
+        //         for (var i = 2; i <= Math.sqrt(a); i++) {
+        //             if (a % i == 0) {
+        //                 console.log(a + ", " + (a % i));
+        //                 return false;
+        //             }
+        //         }
+        //         return true;
+        //     });
+        // }
+
+        // // 测试:
+        // var
+        //     x,
+        //     r,
+        //     arr = [];
+        // for (x = 1; x < 100; x++) {
+        //     arr.push(x);
+        // }
+        // r = get_primes(arr);
+        // if (r.toString() === [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97].toString()) {
+        //     console.log('测试通过!');
+        // } else {
+        //     console.log('测试失败: ' + r.toString());
+        // }
+        // function Cat(name) {
+        //     this.name = name;
+        //     this.say = function() {
+        //         return `Hello, ${name}!`;
+        //     }
+        // }
+        // // 测试:
+        // var kitty = new Cat('Kitty');
+        // var doraemon = new Cat('哆啦A梦');
+        // if (kitty && kitty.name === 'Kitty' &&
+        //     kitty.say &&
+        //     typeof kitty.say === 'function' &&
+        //     kitty.say() === 'Hello, Kitty!' &&
+        //     kitty.say === doraemon.say
+        // ) {
+        //     console.log('测试通过!');
+        // } else {
+        //     console.log('测试失败!');
+        // }
+
+        // class Animal {
+        //     constructor(name) {
+        //         this.name = name;
+        //     }
+        // }
+
+        // class Cat extends Animal {
+        //     constructor(name) {
+        //         super(name);
+        //     }
+
+        //     say() {
+        //         return `Hello, ${this.name}!`;
+        //     }
+        // }
+        // // 测试:
+        // var kitty = new Cat('Kitty');
+        // var doraemon = new Cat('哆啦A梦');
+        // if ((new Cat('x') instanceof Animal) &&
+        //     kitty &&
+        //     kitty.name === 'Kitty' &&
+        //     kitty.say &&
+        //     typeof kitty.say === 'function' &&
+        //     kitty.say() === 'Hello, Kitty!' &&
+        //     kitty.say === doraemon.say) {
+        //     console.log('测试通过!');
+        // } else {
+        //     console.log('测试失败!');
+        // }
+        // 选择<p>JavaScript</p>:
+        // var js = document.querySelector('#test-p');
+
+        // // 选择<p>Python</p>,<p>Ruby</p>,<p>Swift</p>:
+        // var arr = document.querySelectorAll('.c-red.c-green p');
+
+        // // 选择<p>Haskell</p>:
+        // var haskell = document.querySelector('#test-div div:nth-child(3) p:nth-child(2)');
+
+        // // 测试:
+        // if (!js || js.innerText !== 'JavaScript') {
+        //     alert('选择JavaScript失败!');
+        // } else if (!arr || arr.length !== 3 || !arr[0] || !arr[1] || !arr[2] || arr[0].innerText !== 'Python' || arr[1].innerText !== 'Ruby' || arr[2].innerText !== 'Swift') {
+        //     console.log('选择Python,Ruby,Swift失败!');
+        // } else if (!haskell || haskell.innerText !== 'Haskell') {
+        //     console.log('选择Haskell失败!');
+        // } else {
+        //     console.log('测试通过!');
+        // }
+
+        // 获取<p>javascript</p>节点:
+        // var js = document.querySelector('#test-js');
+
+        // // 修改文本为JavaScript:
+        // // TODO:
+        // js.innerHTML = 'JavaScript';
+
+        // // 修改CSS为: color: #ff0000, font-weight: bold
+        // js.style.color = '#ff0000';
+        // js.style.fontWeight = 'bold';
+
+        // // 测试:
+        // if (js && js.parentNode && js.parentNode.id === 'test-div' && js.id === 'test-js') {
+        //     if (js.innerText === 'JavaScript') {
+        //         if (js.style && js.style.fontWeight === 'bold' && (js.style.color === 'red' || js.style.color === '#ff0000' || js.style.color === '#f00' || js.style.color === 'rgb(255, 0, 0)')) {
+        //             console.log('测试通过!');
+        //         } else {
+        //             console.log('CSS样式测试失败!');
+        //         }
+        //     } else {
+        //         console.log('文本测试失败!');
+        //     }
+        // } else {
+        //     console.log('节点测试失败!');
+        // }
 
         // 测试:
-        var
-            x,
-            r,
-            arr = [];
-        for (x = 1; x < 100; x++) {
-            arr.push(x);
-        }
-        r = get_primes(arr);
-        if (r.toString() === [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97].toString()) {
-            console.log('测试通过!');
-        } else {
-            console.log('测试失败: ' + r.toString());
-        }
+        // var lang = document.querySelectorAll('.lang');
+        // const nodelistToArray = Array.prototype.slice.call(lang);
+        // nodelistToArray.sort(function(a, b) {
+        //     return a.innerText.localeCompare(b.innerText);
+        // });
+
+        // var list = document.querySelector('#test-list');
+        // for (var i = 0; i < nodelistToArray.length; i++) {
+        //     list.append(nodelistToArray[i]);
+        // }
+
+        // (function() {
+        //     var
+        //         arr, i,
+        //         t = document.getElementById('test-list');
+        //     if (t && t.children && t.children.length === 5) {
+        //         arr = [];
+        //         for (i = 0; i < t.children.length; i++) {
+        //             arr.push(t.children[i].innerText);
+        //         }
+        //         if (arr.toString() === ['Haskell', 'JavaScript', 'Python', 'Ruby', 'Scheme'].toString()) {
+        //             console.log('测试通过!');
+        //         } else {
+        //             console.log('测试失败: ' + arr.toString());
+        //         }
+        //     } else {
+        //         console.log('测试失败!');
+        //     }
+        // })();
+
+        // 测试:
+        // var noWeb = ['Swift', 'ANSI C', 'DirectX'];
+        // var ul = document.querySelector('#test-list');
+        // var ulArray = Array.from(ul.children);
+        // for (var i = 0; i < ulArray.length; i++) {
+        //     var li = ulArray[i];
+        //     if (noWeb.includes(li.innerText)) {
+        //         ul.removeChild(li);
+        //     }
+        // }
+        // (function() {
+        //     var
+        //         arr, i,
+        //         t = document.getElementById('test-list');
+        //     if (t && t.children && t.children.length === 3) {
+        //         arr = [];
+        //         for (i = 0; i < t.children.length; i++) {
+        //             arr.push(t.children[i].innerText);
+        //         }
+        //         if (arr.toString() === ['JavaScript', 'HTML', 'CSS'].toString()) {
+        //             console.log('测试通过!');
+        //         } else {
+        //             console.log('测试失败: ' + arr.toString());
+        //         }
+        //     } else {
+        //         console.log('测试失败!');
+        //     }
+        // })();
+
+        // var checkRegisterForm = function() {
+        //     var username = document.querySelector('#username').nodeValue;
+        //     var pwd = document.querySelector('#password').nodeValue;
+        //     var pwd2 = document.querySelector('#password-2').nodeValue;
+
+        //     var usernameReg = /[\da-zA-Z]/;
+
+        //     return false;
+        // }
+
+        // // 测试:
+        // ;
+        // (function() {
+        //     window.testFormHandler = checkRegisterForm;
+        //     var form = document.getElementById('test-register');
+        //     if (form.dispatchEvent) {
+        //         var event = new Event('submit', {
+        //             bubbles: true,
+        //             cancelable: true
+        //         });
+        //         form.dispatchEvent(event);
+        //     } else {
+        //         form.fireEvent('onsubmit');
+        //     }
+        // })();
+
+        var selected = null;
+        selected = $('#para-1');
+        selected = $('.color-red.color-green');
+        selected = $('.color-red');
+        selected = $('[class^="color-"]');
+        selected = $('input[name=name]');
+        selected = $('input[name=name],input[name=email]');
     </script>
-</head>
-
-<body>
-
 </body>
 
 </html>

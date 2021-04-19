@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="js/jquery-3.6.0.js"></script>
+    <!-- <div class="test-selector">
+        <ul class="test-lang">
+            <li class="lang-javascript">JavaScript</li>
+            <li class="lang-python">Python</li>
+            <li class="lang-lua">Lua</li>
+        </ul>
+        <ol class="test-lang">
+            <li class="lang-swift">Swift</li>
+            <li class="lang-java">Java</li>
+            <li class="lang-c">C</li>
+        </ol>
+    </div>
+    
+    <script>
+        'use strict';
+        var selected = null;
+        // 分别选择所有语言，所有动态语言，所有静态语言，JavaScript，Lua，C等:
+        selected = $('div.test-selector li');
+        selected = $('div.test-selector ul li');
+        selected = $('div.test-selector ol li');
+        // 高亮结果:
+        if (!(selected instanceof jQuery)) {
+            return console.log('不是有效的jQuery对象!');
+        }
+        $('#test-jquery').find('*').css('background-color', '');
+        selected.css('background-color', '#ffd351');
+    </script> -->
+
+
+    <form id="test-form" action="#0" onsubmit="return false;">
+        <p><label>Name: <input name="name"></label></p>
+        <p><label>Email: <input name="email"></label></p>
+        <p><label>Password: <input name="password" type="password"></label></p>
+        <p>Gender:
+            <label>
+            <input name="gender" type="radio" value="m" checked> Male
+        </label>
+            <label>
+            <input name="gender" type="radio" value="f"> Female
+        </label>
+        </p>
+        <p><label>City: <select name="city">
+        <option value="BJ" selected>Beijing</option>
+        <option value="SH">Shanghai</option>
+        <option value="CD">Chengdu</option>
+        <option value="XM">Xiamen</option>
+    </select></label></p>
+        <p><button type="submit">Submit</button></p>
+    </form>
+    <script>
+        let formDate = {};
+        $('form').submit(function(event) {
+            var form = $('form#test-form');
+            var input = form.find('input');
+            input.map(function() {
+                formDate[this.name] = this.value;
+            });
+            console.log(formDate);
+        });
+    </script>
+
+</body>
+
+</html>
