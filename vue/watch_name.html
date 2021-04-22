@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="text" v-model='name'>
+        <span>{{tip}}</span>
+    </div>
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                name: '',
+                tip: ''
+            },
+            methods: {
+                checkName: function() {
+                    var that = this;
+                    setTimeout(function() {
+                        if (that.name === 'admin') {
+                            that.tip = '用户名已经存在，请更换一个';
+                        } else {
+                            that.tip = '用户名可以使用'
+                        }
+                    }, 500)
+                }
+            },
+            watch: {
+                name: function(val) {
+                    this.tip = 'Checking...';
+                    this.checkName(val);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

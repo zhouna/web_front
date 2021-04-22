@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>简单计算器</h1>
+        数值A:
+        <input type="text" v-model='a'>
+        <br> 数值B:
+        <input type="text" v-model='b'>
+        <br>
+        <button v-on:click='sum'>计算</button>
+        <br> 计算结果：<span v-text='c'></span>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                a: '',
+                b: '',
+                c: ''
+            },
+            methods: {
+                sum: function() {
+                    this.c = parseInt(this.a) + parseInt(this.b);
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>

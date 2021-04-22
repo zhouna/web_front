@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .hide {
+            display: none;
+        }
+        
+        .show {
+            display: block;
+        }
+        
+        .active {
+            background-color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="tab">
+            <ul>
+                <li :class='currentId == item.id ? "active" : ""' v-for='item in list' @click='tab' :id='item.id'>{{item.title}}</li>
+            </ul>
+            <div class="hide" :class='currentId == item.id ? "show": ""' v-for='item in list'>
+                <img :src='item.path' alt="item.title">
+            </div>
+        </div>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                currentId: 0,
+                list: [{
+                    id: 0,
+                    title: 'apple',
+                    path: 'img/apple.jpg'
+                }, {
+                    id: 1,
+                    title: 'orange',
+                    path: 'img/orange.jpg'
+                }, {
+                    id: 2,
+                    title: 'lemon',
+                    path: 'img/lemon.jpg'
+                }]
+            },
+            methods: {
+                tab: function(event) {
+                    this.currentId = event.target.id;
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
